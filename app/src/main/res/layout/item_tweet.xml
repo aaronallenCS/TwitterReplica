@@ -48,6 +48,19 @@
         android:textSize="14sp" />
 
     <TextView
+        android:id="@+id/postedTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tvBody"
+        android:layout_alignParentRight="false"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginBottom="5dp"
+        android:layout_toRightOf="@id/tvAtHandle"
+        android:text="3hr"
+        android:textSize="14sp" />
+
+    <TextView
         android:id="@+id/tvBody"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -114,5 +127,6 @@
         android:layout_marginLeft="100dp"
         android:layout_toRightOf="@id/retweet"
         app:srcCompat="@drawable/ic_baseline_favorite_border_24" />
+
 
 </RelativeLayout>
