@@ -2,18 +2,22 @@ package com.codepath.apps.restclienttemplate.models;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.parceler.Parcel;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@Parcel
 public class Tweet
 {
     public String body;
     public String createdAt;
     public Integer favoriteCount;
-    public Integer replyCount;
     public Integer retweetCount;
     public User user;
+
+    public Tweet()
+    { }
 
     public static Tweet fromJson(JSONObject jsonObject) throws JSONException
     {
@@ -22,7 +26,6 @@ public class Tweet
         tweet.createdAt = jsonObject.getString("created_at");
         tweet.favoriteCount = jsonObject.getInt("favorite_count");
         tweet.retweetCount = jsonObject.getInt("retweet_count");
-//        tweet.replyCount = jsonObject.getInt("reply_count");
         tweet.user = User.fromJson(jsonObject.getJSONObject("user"));
 
         return tweet;
